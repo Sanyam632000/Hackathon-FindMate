@@ -1,38 +1,663 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: 'Inter', sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  width: 100%;
+  height: 90px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-black{
+  width: 100%;
+  height: 90px;
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 3px solid black;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  overflow: auto;
+}
+
+
+
+h1{
+  
+  margin: 15px 25px;
+  font-size: 45px;
+}
+
+.for-header-black{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul{
+  list-style-type: none;
+  display: flex;
+}
+li{ 
+  padding: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-links{
+  margin-left: 30px;
+  color: black;
+  text-decoration: none;
+  font-size:25px;
+  font-weight:normal;
+  color: black;
+}
+
+.header-black-link{
+  margin-left: 30px;
+  color: white;
+  text-decoration: none;
+  font-size:25px;
+  font-weight:normal;
+  
+}
+
+.header-links:focus{
+  text-decoration: underline;
+  color:black;
+  font-weight: bolder;
+}
+
+.header-button-links{
+  text-decoration: none;
+  color: black;
+  font-size: larger;
+  font-weight: bolder;
+  visibility: visible;
+}
+
+.header-button-hidden{
+  visibility: hidden;
+}
+
+.header-button{
+  margin-top: 5px;
+  margin-right: 40px;
+  font-size: larger;
+  font-weight: bolder;
+  color: black;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.header-button:hover {
+  background-color: black;
+  color:white;
+  cursor: pointer;
+}
+
+.header-div{
+  flex:2;
+}
+
+.header-middle-ul{
+  flex:4;
+}
+
+.header-right-ul{
+  flex:2; 
+}
+
+/*Home tab*/
+
+.home-subject{
+  display: flex;
+}
+
+.post-question-button{
+  margin-left: 1100px;
+  font-weight: bold;
+  font-size: larger;
+  height: 50px;
+  width: 200px;
+  background-color: white;
+  color:black;
+  margin-top:5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.post-commentOnComment-button{
+  margin-left: 1000px;
+  font-weight: bold;
+  font-size: larger;
+  height: 50px;
+  width: 200px;
+  background-color: white;
+  color:black;
+  margin-top:5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.post-question-button:hover{
+  background-color: green;
+  color:white;
+}
+
+.post-commentOnComment-button:hover{
+  background-color: green;
+  color:white;
+}
+
+select{
+  padding: 5px;
+  width: 250px;
+  height: 50px;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+option{
+  padding: 5px;
+}
+
+.find-questions-by-department{
+  display: flex;
+  margin-left: 60px;
+  margin-top: 75px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.written-post{
+  height: 100%;
+  width: 1350px;
+  background-color: #dee4e7;
+  border: 5px solid black;
+  margin:40px 60px; 
+  display: block;
+}
+
+.written-post-hidden{
+  display: none;
+}
+
+.post-anonymous-name{
+  margin-left:25px;
+  color: lightseagreen;
+}
+
+.post-h6{
+  margin-left: 25px;
+  display: flex;
+}
+
+h5{
+ display: flex;
+ margin-right:10px;
+ justify-content: center;
+}
+
+.post-subject{
+  margin-left: 25px;
+  color:lightseagreen
+}
+
+span{
+  margin-left:5px;
+}
+
+.add-comment-textarea{
+  margin:20px 20px;
+  min-height: 100%;
+  width:1250px;
+  font-size:x-large;
+  background-color: white;
+  padding: 15px;
+  display: block
+}
+
+
+
+.add-comment-textarea::placeholder{
+  color:black;
+}
+
+.previos-comment-textarea{
+  margin:20px 20px;
+  min-height: 100%;
+  width:1150px;
+  font-size:x-large;
+  background-color: white;
+  padding: 15px;
+  display: block;
+}
+
+.previos-comment-textarea::placeholder{
+  color:black
+}
+
+.all-comments-h2{
+  margin-left: 25px;
+}
+
+.previous-comments{
+  height: 100%;
+  width: 1250px;
+  background-color: #edf2f4;
+  border: 1px solid black;
+  margin:40px 40px;
+  font-weight: normal !important;
+}
+
+.nested-comments{
+  height: 100%;
+  width: 1150px;
+  background-color: #e9ecef;
+  border: 1px solid black;
+  margin:40px 40px;
+  font-weight: normal !important;
+}
+
+.previous-comments-h3{
+  padding: 20px;
+}
+
+.comments-to-comments{
+  padding:20px;
+}
+
+
+/*Student Tab*/
+
+.student-select-department{
+  display: flex;
+  margin-top:30px;
+  margin-left: 25px;
+}
+
+.students-div{
+  height: 100%;
+  width: 1400px;
+  background-color: transparent;
+  border: 3px solid black;
+  margin:40px 40px;
+  font-weight: normal !important;
+ 
+}
+
+h2{
+  margin: 15px 25px;
+}
+
+.student-chat-button{
+  margin-right: 100px;
+  font-weight: bold;
+  height: 50px;
+  background-color: white;
+  color:black;
+  margin-top:5px;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.student-chat-button:hover{
+  background-color: green;
+  color: white;
+}
+
+.student-name-button{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.student-course-list{
+  list-style-type:decimal;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Market Tab*/
+.market-img{
+  height: 400px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.market-div{
+  margin-top: 10px;
+  display: flex;
+}
+
+.market-item-info{
+  margin-left: 30px;
+}
+
+.market-item-info-description{
+  margin-left: 30px;
+  font-size: larger;
+}
+
+/*MyChat Component*/
+.mychat{
+  display: flex;
+  
+}
+
+.feed {
+  background-color: black;
+  color: white;
+  text-align: left;
+  padding: 15px;
+  margin-left: -10px;
+  width: 396px;
+}
+
+.feed:hover{
+  background-color: #dee4e7;
+  color: black;
+}
+
+.green_button {
+  font-size: larger;
+  font-weight: bolder;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 10px;
+ 
+}
+
+.mychat-contacts{
+  border-right: 1px solid black;
+  background-color: transparent;
+  height: 651px;
+  flex:2.5;
+
+}
+
+.mychat-contacts-header{
+  height: 50px;
+  width: 100%;
+  border-bottom:2px solid black;
+}
+
+.mychat-contacts-header-h2{
+  margin-left: 120px;
+}
+
+.mychat-chat{
+  flex:7.5;
+}
+
+.mychat-chat-header{
+  height: 50px;
+  width: 100%;
+  border-bottom: 2px solid black;
+
+}
+
+
+/*For Login*/
+
+.bigScreenLogin {
+  background-color: lightblue;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-heading {
+  font-weight: bolder;
+  color: blue;
+  margin-top: 300px; 
+}
+
+.login_page_h3 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-weight: normal;
+  width: 450px; 
+}
+
+.mainLogin {
+  border-radius: 10px;
+  height: 500px;
+  width: 410px;
+  margin-left: 100px;
+  margin-top: 150px;
+  background-color: white;
+}
+
+.login-box-heading {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: blue;
+  font-weight: bolder;
+  font-size: larger;
+  font-size: 35px;
+  margin-left: 140px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-left: 35px;
+  color: black;
+  font-weight: bold;
+}
+
+.email_input {
+  padding: 5px;
+  border: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid black;
+  margin-left: 30px;
+  width: 330px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.email_input:focus {
+  background-color: lightblue;
+}
+
+.login_button {
+  
+  
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-weight: bolder;
+ 
+  height: 40px;
+  cursor: pointer;
+  margin-top: 40px;
+  width: 350px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  outline: none;
+}
+
+.login_button:hover {
+  background-color: blue;
+  border: 2px solid transparent;
+  color: white;
+}
+
+.forget_password_button {
+  margin-left: 135px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.forget_password_button:hover{
+  background-color: lightblue;
+}
+
+
+.create_new_account {
+  margin-top: 20px;
+  height: 40px;
+  width: 250px;
+  margin-left: 80px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.create_new_account:hover {
+  background-color: green;
+  border: 2px solid transparent;
+  color: white;
+}
+
+.link_create_account {
+  text-decoration: none;
+  color: black;
+}
+
+.link_create_account:hover {
+  color: white;
+}
+
+/*For Signup*/
+
+.bigScreenLogin-signup {
+  background-color: lightblue;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+}
+
+.mainSignup {
+  border-radius: 10px;
+  height: 600px;
+  width: 410px;
+  margin-left: 100px;
+  margin-top: 100px;
+  background-color: white;
+}
+
+.email_input-signup {
+  padding: 5px;
+  border: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid black;
+  margin-left: 30px;
+  width: 330px;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.email_input-signup:focus {
+  background-color: lightblue;
+}
+
+
+
+.signup_button:hover {
+  background-color: green;
+}
+
+.already_account {
+  margin-left: 100px;
+}
+
+.link_already_account {
+  text-decoration: none;
+  color: black;
+}
+
+.link_already_account:hover {
+  color: black;
+}
+
+/*Add Course or Info*/
+.addCourseBox{
+  background-color: #dee4e7;
+  height: 100%;
+  width: 800px;
+  padding: 5px;
+  margin: 70px 400px;
+ justify-content: center;
+
+}
+
+.addCourseBox-firstDiv{
+  display: flex;
+}
+
+.addCourse-select-department{
+  margin-top:100px;
+  margin-left: 30px;
+  margin-right: 30px;
+  
+}
+
+.addCourse-select-course{
+  margin: 100px 30px;
+}
+
+.add-course-button{
+  margin-top: 5px;
+  cursor: pointer;
+  margin-right: 40px;
+  font-size: larger;
+  font-weight: bolder;
+  color: black;
+  height: 50px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 100px 30px;
+  
+}
+
+.add-course-button:hover{
+  background-color: green;
+  color:white
+}
+
+.addCourse-h2{
+  font-size: 35px;
+  margin-top: -20px;
+  margin-left: 160px;
+}
+
+ol{
+  font-size: larger;
+  font-size: 22px;
+  margin-left: 40px;
+  font-weight: bolder;
+}
+
+.addCourse-remove-course{
+  margin-left:30px; 
+  margin-top: -130px;
 }
