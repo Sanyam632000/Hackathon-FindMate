@@ -68,6 +68,6 @@ app.use(express.static(path.join(__dirname, "/hackathon")));
   res.sendFile(path.join(__dirname, '/hackathon/build', 'index.html'));
 });*/
 
-app.listen(7000,(req,res) => {
+app.listen(7070,(req,res) => {
     console.log(`This is backend`)
 })
